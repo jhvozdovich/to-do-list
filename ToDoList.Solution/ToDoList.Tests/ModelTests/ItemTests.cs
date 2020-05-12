@@ -8,6 +8,11 @@ namespace ToDoList.Tests
   [TestClass]
   public class ItemTests : IDisposable
   {
+    public void Dispose()
+    {
+      Item.ClearAll();
+    }
+  
     [TestMethod]
     public void ItemConstructor_CreatesInstanceOfItem_Item()
     {
